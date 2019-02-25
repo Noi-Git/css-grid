@@ -5,6 +5,22 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 7rem;
+
+  @media only screen and (max-width: $bp-large) {
+    margin: 7rem 0;
+    grid-column: 1/-1;
+    margin: 7rem 5rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    margin: 7rem 2rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    // margin: 7rem 0;
+    // grid-column: 1/-1;
+    // margin: 7rem 2rem;
+  }
 }
 
 .home {
@@ -13,6 +29,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 3.5rem;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-row-gap: 2.5rem;
+  }
 
   &__img {
     width: 100%;
